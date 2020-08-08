@@ -27,12 +27,10 @@ jobs:
       with:
         node-version: 12
         
-    - uses: borales/actions-yarn@v2.0.0
-      with:
-        cmd: install # will run `yarn install` command
-    
-    - name: run base react app
-      run: yarn run build
+    - name: yarn install, build
+      run: |
+          yarn install
+          yarn run build
         
     - name: install surge
       run: npm install --global surge
