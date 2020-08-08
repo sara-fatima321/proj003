@@ -30,7 +30,7 @@ jobs:
     - name: yarn install, build
       run: |
           yarn install
-          yarn run build
+          yarn run build --if-present
         
     - name: install surge
       run: npm install --global surge
